@@ -21,9 +21,9 @@ public class LibraryEventServicesImpl implements LibraryEventServices {
                                                     ExecutionException, InterruptedException {
         log.info("Before calling Producer");
         //invoke Kafka Producer
-        //libraryEventProducer.sendLibraryEvent(libraryEvent);
+        libraryEventProducer.sendLibraryEvent(libraryEvent);
         //SendResult<Integer,String> result = libraryEventProducer.sendLibraryEventSynchronously(libraryEvent);
-        libraryEventProducer.sendLibraryEventUsingSend(libraryEvent);
+ //       libraryEventProducer.sendLibraryEventUsingSend(libraryEvent);
 //        log.info("SendResult : {}",result.toString());
         log.info("After calling Producer");
         return libraryEvent;
